@@ -1,4 +1,4 @@
-package com.example.digidex.ui.list
+package com.example.digidex.ui.detail
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

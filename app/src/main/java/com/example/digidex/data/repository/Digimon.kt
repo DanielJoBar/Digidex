@@ -1,5 +1,6 @@
 package com.example.digidex.data.repository
 
+
 data class Digimon(
     val id: Number,
     val name: String,

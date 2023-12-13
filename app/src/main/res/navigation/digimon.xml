@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/digimon"
+    app:startDestination="@id/digimonListFragment">
+
+    <fragment
+        android:id="@+id/digimonListFragment"
+        android:name="com.example.digidex.ui.list.DigimonListFragment"
+        android:label="fragment_digimon_list"
+        tools:layout="@layout/fragment_digimon_list" />
+</navigation>
