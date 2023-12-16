@@ -12,7 +12,7 @@
     <LinearLayout
         android:id="@+id/isLoading"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
         android:gravity="center"
         >
@@ -21,15 +21,15 @@
             android:id="@+id/textoLoading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="30dp"
+            android:textSize="10sp"
             android:text="@string/loading">
 
         </TextView>
 
         <com.google.android.material.progressindicator.CircularProgressIndicator
             android:id="@+id/progressBar"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:indeterminate="true"
             android:progressBackgroundTint="@android:color/black"
             android:progressTint="@android:color/holo_red_dark"
@@ -40,9 +40,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_Fragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-        app:spanCount="3"
+        app:spanCount="2"
         >
 
     </androidx.recyclerview.widget.RecyclerView>

@@ -10,11 +10,9 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.Observer
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
-import androidx.lifecycle.viewModelScope
-import com.example.digidex.R
 import com.example.digidex.data.repository.Digimon
 import com.example.digidex.databinding.FragmentDigimonListBinding
-import com.example.digidex.ui.adapter.DigimonAdapter
+import com.example.digidex.ui.adapter.DigimonListAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -27,16 +25,25 @@ class DigimonListFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return super.onCreateView(inflater, container, savedInstanceState)
+        binding = FragmentDigimonListBinding.inflate(inflater,
+            container,
+            false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         binding.isLoading.visibility = View.VISIBLE
-        val observer = Observer<List<Digimon>>{
-            list -> val adapter = DigimonAdapter(list)
-            binding.rvFragment.adapter = adapter
-            binding.isLoading.visibility = View.GONE
+        val adapter = DigimonListAdapter(requireContext())
+        val recyclerView = binding.rvFragment
+        recyclerView.adapter = adapter
+        viewLifecycleOwner.lifecycleScope.launch {
+            repeatOnLifecycle(Lifecycle.State.STARTED){
+                viewModel._staticList.collect{
+                    binding.isLoading.visibility = View.GONE
+                    adapter.submitList(it)
+                }
+            }
         }
     }
 }

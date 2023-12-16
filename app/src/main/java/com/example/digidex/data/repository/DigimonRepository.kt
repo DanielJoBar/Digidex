@@ -25,6 +25,9 @@ class DigimonRepository @Inject constructor(
 
     //Actualiza la base de datos local
     suspend fun updateDatabase()= withContext(Dispatchers.IO){
-        localRepository.insert(apiRepository.getAll().digimonEntityList())
+        withContext(Dispatchers.IO) {
+            val apiDigimon = apiRepository.getAll()
+            localRepository.insert(apiDigimon.digimonEntityList())
+        }
     }
 }

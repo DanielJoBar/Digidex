@@ -17,7 +17,7 @@ abstract class DigimonDatabase():RoomDatabase(){
 
         fun  getInstance(context: Context): DigimonDatabase {
             return INSTANCE ?: synchronized(this) {
-                INSTANCE ?: buildDatabase(context).also { INSTANCE = it }
+                INSTANCE ?: buildDatabase(context).also { digimonDatabase ->  INSTANCE = digimonDatabase}
             }
         }
 

@@ -10,7 +10,9 @@ import com.example.digidex.data.db.entities.DigimonEntity
 @Dao
 interface DigimonDAO {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertAll(listPokemonEntity: List<DigimonEntity>)
+    suspend fun createListDigimon(listPokemonEntity: List<DigimonEntity>)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun createDigimon(listPokemonEntity:DigimonEntity)
     @Query("SELECT * FROM digimon")
      fun getAll(): Flow<List<DigimonEntity>>
 

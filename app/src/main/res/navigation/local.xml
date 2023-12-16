@@ -8,6 +8,6 @@
     <fragment
         android:id="@+id/digimonCreateLocalDataListFragment"
         android:name="com.example.digidex.ui.list.DigimonCreateLocalDataListFragment"
-        android:label="fragment_digimon_local_data"
+        android:label="DigimonLocalList"
         tools:layout="@layout/fragment_digimon_local_data" />
 </navigation>

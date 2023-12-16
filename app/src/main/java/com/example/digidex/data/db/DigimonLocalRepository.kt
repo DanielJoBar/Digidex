@@ -12,7 +12,7 @@ class DigimonLocalRepository @Inject constructor(private val digimonDao: Digimon
 //Aqui es donde se realizan los casos de usos
     @WorkerThread
     suspend fun insert(listDigimonEntity: List<DigimonEntity>) {
-        digimonDao.insertAll(listDigimonEntity)
+        digimonDao.createListDigimon(listDigimonEntity)
     }
 
 }

@@ -5,9 +5,9 @@ import javax.inject.Inject
 class DigimonApiRepository @Inject constructor(private val service:DigimonService){
     //Aqui se alojan los métodos con respecto a la api
     suspend fun getAll(): List<DigimonApiModel> {
-        val list = service.api.getAll()
-        return list.name.map {
-            Response -> service.api.getDetail(Response.name).asApiModel()
+        val list = service.api.getAll(30)
+        return list.content.map {
+            service.api.getDetail(it.name).asApiModel()
         }
     }
 }

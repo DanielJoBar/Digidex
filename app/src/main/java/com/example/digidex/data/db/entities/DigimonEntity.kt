@@ -4,7 +4,7 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.digidex.data.repository.Digimon
 
-@Entity("digimon")
+@Entity(tableName = "digimon")
 data class DigimonEntity(
     //Columnas de la tabla digimon
     val id: Int,

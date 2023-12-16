@@ -5,22 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="horizontal">
-
-
+    android:orientation="vertical">
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
+        app:menu="@menu/menu_bottom_nav"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        />
         <androidx.fragment.app.FragmentContainerView
             android:id="@+id/fragment_digimon_List_Main_Area"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:name="androidx.navigation.fragment.NavHostFragment"
             app:defaultNavHost="true"
             app:navGraph="@navigation/nav_graph"
-            >
+            tools:layout="@layout/fragment_digimon_list">
         </androidx.fragment.app.FragmentContainerView>
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_nav"
-            app:menu="@menu/menu_bottom_nav"
-            android:layout_width="match_parent"
-            android:layout_height="300px"
-            />
+
     </LinearLayout>

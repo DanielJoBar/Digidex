@@ -23,34 +23,29 @@ fun List<DigimonApiModel>.digimonEntityList():List<DigimonEntity>{
     }
 }
 data class DigimonListApiModel(
-    val name:List<DigimonNameResponse>,
+    val content:List<DigimonDetailResponse>,
 ) {
-    data class DigimonNameResponse(
-        val name: String,
-    )
-
     data class DigimonDetailResponse(
         val id: Int,
         val name: String,
-        val images: DigimonImageResponse,
-        val levels: DigimonLevelResponse,
-        val types: DigimonTypeResponse,
-        val attributes: DigimonAttributesResponse
+        val images: List<DigimonImageResponse>,
+        val levels: List<DigimonLevelResponse>,
+        val types: List<DigimonTypeResponse>,
+        val attributes: List<DigimonAttributesResponse>
     ){
         fun asApiModel():DigimonApiModel{
             return DigimonApiModel(
                 id,
                 name,
-                images.href,
-                levels.level,
-                types.type,
-                attributes.attribute
+                images[1].href,
+                levels[1].level,
+                types[1].type,
+                attributes[1].attribute
             )
         }
     }
     data class DigimonImageResponse(
         val href: String,
-        val transparent: Boolean,
     )
 
     data class DigimonLevelResponse(

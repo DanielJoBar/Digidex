@@ -4,12 +4,13 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.Query
 import javax.inject.Inject
 import javax.inject.Singleton
 
 interface DigimonApi{
     @GET("digimon")
-    suspend fun getAll():DigimonListApiModel
+    suspend fun getAll(@Query("pageSize") pageSize:Int):DigimonListApiModel
     @GET("digimon/{name}")
     suspend fun getDetail(@Path("name")name: String):DigimonListApiModel.DigimonDetailResponse
 }
