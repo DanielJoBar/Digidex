@@ -9,5 +9,20 @@
         android:id="@+id/digimonListFragment"
         android:name="com.example.digidex.ui.list.DigimonListFragment"
         android:label="fragment_digimon_list"
-        tools:layout="@layout/fragment_digimon_list" />
+        tools:layout="@layout/fragment_digimon_list" >
+        <action
+            android:id="@+id/action_digimonListFragment_to_digimonDetailFragment"
+            app:destination="@id/digimonDetailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/digimonDetailFragment"
+        android:name="com.example.digidex.ui.detail.DigimonDetailFragment"
+        android:label="fragment_digimon_detail"
+        tools:layout="@layout/fragment_digimon_detail" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
+
 </navigation>

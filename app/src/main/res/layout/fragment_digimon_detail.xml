@@ -4,11 +4,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.detail.DigimonDetailFragment">
-
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ImageView
+        android:id="@+id/botonNavegacion"
+        android:layout_height="40dp"
+        android:layout_width="80dp"
+        android:src="@drawable/back"
+        >
+    </ImageView>
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:padding="20dp"
+        >
+        <ImageView
+            android:id="@+id/digimon_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_launcher_background"
+            >
+        </ImageView>
+        <TextView
+            android:id="@+id/digimon_Text"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="texto"
+            android:layout_gravity="center"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/digimon_Levels"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="texto"
+            android:layout_gravity="center"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/digimon_Types"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="texto"
+            android:layout_gravity="center"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/digimon_Attributes"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="texto"
+            android:layout_gravity="center"
+            >
+        </TextView>
+
+    </LinearLayout>
 
 </FrameLayout>

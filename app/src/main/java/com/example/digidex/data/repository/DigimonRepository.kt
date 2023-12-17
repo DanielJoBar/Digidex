@@ -3,6 +3,7 @@ package com.example.digidex.data.repository
 import com.example.digidex.data.api.DigimonApiRepository
 import com.example.digidex.data.api.digimonEntityList
 import com.example.digidex.data.db.DigimonLocalRepository
+import com.example.digidex.data.db.entities.DigimonEntity
 import com.example.digidex.data.db.entities.asDigimonList
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
@@ -29,5 +30,10 @@ class DigimonRepository @Inject constructor(
             val apiDigimon = apiRepository.getAll()
             localRepository.insert(apiDigimon.digimonEntityList())
         }
+    }
+     suspend fun getOneFromDatabase(digimonName:String):DigimonEntity{
+         return withContext(Dispatchers.IO) {
+             localRepository.getOne(digimonName)
+         }
     }
 }

@@ -3,6 +3,7 @@ package com.example.digidex.data.db.entities
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import com.example.digidex.data.repository.Digimon
+import kotlinx.coroutines.flow.MutableStateFlow
 
 @Entity(tableName = "digimon")
 data class DigimonEntity(
@@ -13,8 +14,15 @@ data class DigimonEntity(
     val levels: String,
     val types: String,
     val attributes: String
-)
-    fun List<DigimonEntity>.asDigimonList():List<Digimon>{
+) {
+    fun asDigimon():Digimon{
+         return Digimon(
+            id, name, images, levels, types, attributes
+        )
+    }
+}
+
+fun List<DigimonEntity>.asDigimonList():List<Digimon>{
         return this.map {
             Digimon(it.id, it.name, it.images, it.levels, it.types, it.attributes)
     }

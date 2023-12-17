@@ -37,10 +37,10 @@ data class DigimonListApiModel(
             return DigimonApiModel(
                 id,
                 name,
-                images[1].href,
-                levels[1].level,
-                types[1].type,
-                attributes[1].attribute
+                images[0].href,
+                levels[0].level,
+                types[0].type,
+                attributes[0].attribute
             )
         }
     }
