@@ -5,4 +5,9 @@
     <string name="digimon">Digimon</string>
     <string name="Box">Caja</string>
     <string name="loading">loading</string>
+    <string name="f_digimon_local_data_nombre_del_nuevo_digimon">Nombre del nuevo Digimon</string>
+    <string name="f_digimon_local_data_tipos">Tipo del digimon</string>
+    <string name="f_digimon_local_data_atributos">Atributos del digimon</string>
+    <string name="f_digimon_local_data_nivel">Nivel del Digimon</string>
+    <string name="f_digimon_local_data_crear">Crear Digimon</string>
 </resources>

@@ -5,12 +5,13 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.example.digidex.data.db.dao.DigimonDAO
+import com.example.digidex.data.db.dao.LocalDataDao
 import com.example.digidex.data.db.entities.DigimonEntity
+import com.example.digidex.data.db.entities.LocalDataEntity
 
 @Database(entities = [DigimonEntity::class], version = 1)
 abstract class DigimonDatabase():RoomDatabase(){
     abstract fun digimonDao(): DigimonDAO
-
     companion object {
         @Volatile
         private var INSTANCE: DigimonDatabase? = null

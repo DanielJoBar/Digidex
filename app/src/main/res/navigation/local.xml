@@ -9,5 +9,26 @@
         android:id="@+id/digimonCreateLocalDataListFragment"
         android:name="com.example.digidex.ui.local.DigimonLocalDataListFragment"
         android:label="DigimonLocalList"
+        tools:layout="@layout/fragment_digimon_local_data_list" >
+        <action
+            android:id="@+id/action_digimonCreateLocalDataListFragment_to_digimonLocalDataFragment"
+            app:destination="@id/digimonLocalDataFragment" />
+        <action
+            android:id="@+id/action_digimonCreateLocalDataListFragment_to_digimonDetailFragment2"
+            app:destination="@id/digimonDetailFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/digimonLocalDataFragment"
+        android:name="com.example.digidex.ui.local.DigimonLocalDataFragment"
+        android:label="fragment_digimon_local_data"
         tools:layout="@layout/fragment_digimon_local_data" />
+    <fragment
+        android:id="@+id/digimonDetailFragment2"
+        android:name="com.example.digidex.ui.detail.DigimonDetailFragment"
+        android:label="fragment_digimon_detail"
+        tools:layout="@layout/fragment_digimon_detail" >
+        <argument
+            android:name="name"
+            app:argType="string" />
+    </fragment>
 </navigation>

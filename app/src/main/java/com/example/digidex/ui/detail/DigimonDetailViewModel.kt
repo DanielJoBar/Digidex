@@ -2,9 +2,8 @@ package com.example.digidex.ui.detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.digidex.data.repository.Digimon
+import com.example.digidex.data.repository.models.Digimon
 import com.example.digidex.data.repository.DigimonRepository
-import dagger.hilt.android.AndroidEntryPoint
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

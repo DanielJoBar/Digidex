@@ -1,4 +1,4 @@
-package com.example.digidex.data.repository
+package com.example.digidex.data.repository.models
 
 
 data class Digimon(

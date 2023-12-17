@@ -3,6 +3,8 @@ package com.example.digidex.di
 import android.content.Context
 import com.example.digidex.data.db.dao.DigimonDAO
 import com.example.digidex.data.db.DigimonDatabase
+import com.example.digidex.data.db.DigimonLocalDatabase
+import com.example.digidex.data.db.dao.LocalDataDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -20,11 +22,19 @@ object  DatabaseModule {
     fun provideDatabase(@ApplicationContext context: Context):DigimonDatabase{
         return DigimonDatabase.getInstance(context)
     }
-    //
+    @Singleton
+    @Provides
+    fun provideLocalDatabase(@ApplicationContext context: Context):DigimonLocalDatabase{
+        return DigimonLocalDatabase.getInstance(context)
+    }
     @Singleton
     @Provides
     fun providePokemonDao(dataBase: DigimonDatabase): DigimonDAO {
         return dataBase.digimonDao()
     }
-
+    @Singleton
+    @Provides
+    fun provideLocalPokemonDao(dataBase: DigimonLocalDatabase): LocalDataDao {
+        return dataBase.localDataDaoA()
+    }
 }

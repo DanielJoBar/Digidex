@@ -5,6 +5,7 @@ import com.example.digidex.data.api.digimonEntityList
 import com.example.digidex.data.db.DigimonLocalRepository
 import com.example.digidex.data.db.entities.DigimonEntity
 import com.example.digidex.data.db.entities.asDigimonList
+import com.example.digidex.data.repository.models.Digimon
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map

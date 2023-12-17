@@ -3,12 +3,58 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.local.DigimonLocalDataListFragment">
+    tools:context=".ui.local.DigimonLocalDataFragment">
+    <ImageView
+        android:id="@+id/botonNavegacion"
+        android:layout_height="40dp"
+        android:layout_width="80dp"
+        android:src="@drawable/back"
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+        >
+    </ImageView>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_marginTop="50dp"
+        >
+
+        <EditText
+            android:id="@+id/editTextNombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/f_digimon_local_data_nombre_del_nuevo_digimon"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextTipos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/f_digimon_local_data_tipos"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextAtributos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/f_digimon_local_data_atributos"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextNivel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/f_digimon_local_data_nivel"
+            android:inputType="text" />
+
+        <Button
+            android:id="@+id/btnCrear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/f_digimon_local_data_crear" />
+    </LinearLayout>
 
 </FrameLayout>

@@ -38,6 +38,5 @@ class MainActivity : AppCompatActivity() {
         //Le pasamos la vista del menu y cargamos el controlador de la navegación
         navButton.setupWithNavController(navController)
 
-
     }
 }

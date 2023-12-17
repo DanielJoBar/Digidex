@@ -22,5 +22,4 @@
             app:navGraph="@navigation/nav_graph"
             tools:layout="@layout/fragment_digimon_list">
         </androidx.fragment.app.FragmentContainerView>
-
     </LinearLayout>

@@ -9,8 +9,7 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import coil.imageLoader
-import coil.load
-import com.example.digidex.data.repository.Digimon
+import com.example.digidex.data.repository.models.Digimon
 import com.example.digidex.databinding.DigimonListItemBinding
 import coil.request.ImageRequest
 import com.example.digidex.ui.list.DigimonListFragmentDirections
@@ -20,7 +19,7 @@ class DigimonListAdapter(private val context: Context):
     ListAdapter<Digimon, DigimonListAdapter.DigimonViewHolder>(DigimonDiffCallback) {
 
     inner class DigimonViewHolder(private val binding: DigimonListItemBinding): RecyclerView.ViewHolder(binding.root){
-        fun bind(digimon:Digimon) {
+        fun bind(digimon: Digimon) {
             binding.digimonText.text = digimon.name
             val imageRequest = ImageRequest.Builder(context)
                 .data(digimon.images)
