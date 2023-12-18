@@ -5,12 +5,14 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+
+    >
 
     <LinearLayout
         android:id="@+id/isLoading"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -19,14 +21,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/loading"
-            android:textSize="10sp">
+            android:textSize="70dp"
+            >
 
         </TextView>
 
         <com.google.android.material.progressindicator.CircularProgressIndicator
             android:id="@+id/progressBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:indeterminate="true"
             android:progressBackgroundTint="@android:color/black"
             android:progressTint="@android:color/holo_red_dark">
@@ -42,4 +45,5 @@
         app:spanCount="4">
 
     </androidx.recyclerview.widget.RecyclerView>
+
 </LinearLayout>

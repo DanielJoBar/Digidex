@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Local">My creations</string>
+    <string name="loading">Loading....</string>
+    <string name="f_digimon_local_data_nombre_del_nuevo_digimon">Digimon\'s name</string>
+    <string name="f_digimon_local_data_types">Digimon\'s type</string>
+    <string name="f_digimon_local_data_attributes">Digimon\'s attributes</string>
+    <string name="f_digimon_local_data_level">Digimon\'s level</string>
+    <string name="f_digimon_local_data_create">Create Digimon</string>
+    <string name="toastCreateLocalData">You may fill all fields</string>
+    <string name="f_digimon_detail_type">Type:</string>
+    <string name="f_digimon_detail_attribute">"Attribute: "</string>
+    <string name="f_digimon_detail_level">"Level: "</string>
+</resources>

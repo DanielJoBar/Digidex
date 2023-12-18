@@ -3,7 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.local.DigimonLocalDataFragment">
+    tools:context=".ui.local.DigimonLocalDataFragment"
+    android:background="#FBA184"
+    >
     <ImageView
         android:id="@+id/botonNavegacion"
         android:layout_height="40dp"
@@ -22,39 +24,41 @@
         android:layout_marginTop="50dp"
         >
 
-        <EditText
-            android:id="@+id/editTextNombre"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/digimonName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="@string/f_digimon_local_data_nombre_del_nuevo_digimon"
             android:inputType="text" />
 
-        <EditText
-            android:id="@+id/editTextTipos"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/type"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/f_digimon_local_data_tipos"
+            android:hint="@string/f_digimon_local_data_types"
             android:inputType="text" />
 
-        <EditText
-            android:id="@+id/editTextAtributos"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/attribute"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/f_digimon_local_data_atributos"
+            android:hint="@string/f_digimon_local_data_attributes"
             android:inputType="text" />
 
-        <EditText
-            android:id="@+id/editTextNivel"
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/level"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/f_digimon_local_data_nivel"
+            android:hint="@string/f_digimon_local_data_level"
             android:inputType="text" />
 
         <Button
             android:id="@+id/btnCrear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/f_digimon_local_data_crear" />
+            android:text="@string/f_digimon_local_data_create"
+            android:backgroundTint="#A6261C"
+            />
     </LinearLayout>
 
 </FrameLayout>

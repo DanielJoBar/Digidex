@@ -1,13 +1,16 @@
 <resources>
-    <string name="app_name">Digidex</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="digimon">Digimon</string>
-    <string name="Box">Caja</string>
-    <string name="loading">loading</string>
+    <string name="app_name" translatable="false">Digidex</string>
+    <string name="digimon" translatable="false">Digimon</string>
+    <string name="Local">Mis creaciones</string>
+    <string name="loading">Cargando....</string>
     <string name="f_digimon_local_data_nombre_del_nuevo_digimon">Nombre del nuevo Digimon</string>
-    <string name="f_digimon_local_data_tipos">Tipo del digimon</string>
-    <string name="f_digimon_local_data_atributos">Atributos del digimon</string>
-    <string name="f_digimon_local_data_nivel">Nivel del Digimon</string>
-    <string name="f_digimon_local_data_crear">Crear Digimon</string>
+    <string name="f_digimon_local_data_types">Tipo del digimon</string>
+    <string name="f_digimon_local_data_attributes">Atributos del digimon</string>
+    <string name="f_digimon_local_data_level">Nivel del Digimon</string>
+    <string name="f_digimon_local_data_create">Crear Digimon</string>
+    <string name="toastCreateLocalData">Debe introducir todos los campos</string>
+    <string name="f_digimon_detail_type">Tipo: </string>
+    <string name="f_digimon_detail_attribute">Atributo: </string>
+    <string name="f_digimon_detail_level">Nivel: </string>
+
 </resources>

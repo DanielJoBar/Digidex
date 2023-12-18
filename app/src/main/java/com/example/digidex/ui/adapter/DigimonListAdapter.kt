@@ -20,7 +20,7 @@ class DigimonListAdapter(private val context: Context):
 
     inner class DigimonViewHolder(private val binding: DigimonListItemBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(digimon: Digimon) {
-            binding.digimonText.text = digimon.name
+            binding.digimonName.text = digimon.name
             val imageRequest = ImageRequest.Builder(context)
                 .data(digimon.images)
                 .crossfade(true)
@@ -30,7 +30,8 @@ class DigimonListAdapter(private val context: Context):
             binding.linearGrid.setOnClickListener {
                 findNavController(binding.linearGrid.findFragment()).navigate(
                 DigimonListFragmentDirections.actionDigimonListFragmentToDigimonDetailFragment(
-                    name = digimon.name
+                    name = digimon.name,
+                    Local = false
                 )
                 )
             }

@@ -4,7 +4,6 @@ import com.example.digidex.data.api.digimonEntityList
 import com.example.digidex.data.db.DigimonLocalRepository
 import com.example.digidex.data.db.entities.DigimonEntity
 import com.example.digidex.data.db.entities.LocalDataEntity
-import com.example.digidex.data.db.entities.asDigimonList
 import com.example.digidex.data.db.entities.asLocalDigimonList
 import com.example.digidex.data.repository.models.LocalDigimon
 import kotlinx.coroutines.Dispatchers

@@ -21,11 +21,12 @@ class LocalDigimonListAdapter(context: Context):
 
     inner class LocalDigimonViewHolder(private val binding: DigimonListItemBinding): RecyclerView.ViewHolder(binding.root){
         fun bind(digimon: LocalDigimon) {
-            binding.digimonText.text = digimon.name
+            binding.digimonName.text = digimon.name
             binding.linearGrid.setOnClickListener {
                 NavHostFragment.findNavController(binding.linearGrid.findFragment()).navigate(
                     DigimonLocalDataListFragmentDirections.actionDigimonCreateLocalDataListFragmentToDigimonDetailFragment2(
-                        name = digimon.name
+                        name = digimon.name,
+                        Local = true
                     )
                 )
             }

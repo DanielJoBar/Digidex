@@ -23,7 +23,6 @@ class DigimonDetailFragment : Fragment() {
     lateinit var binding: FragmentDigimonDetailBinding
     private val arguments : DigimonDetailFragmentArgs by navArgs()
     private val viewModel: DigimonDetailViewModel by viewModels()
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -38,20 +37,38 @@ class DigimonDetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val name = arguments.name
+        val isLocal = arguments.Local
         viewModel.viewModelScope.launch {
-            viewModel.getDigimon(name)
+            if(!isLocal)
+                viewModel.getDigimon(name)
+            else
+                viewModel.getLocalDigimon(name)
         }
         viewModel.viewModelScope.launch {
-            viewModel.digimonData.collect(){
-                digimon -> binding.digimonText.text = digimon.name
-                binding.digimonImage.load(digimon.images)
-                binding.digimonLevels.text = digimon.levels
-                binding.digimonAttributes.text = digimon.attributes
-                binding.digimonTypes.text = digimon.types
-                binding.botonNavegacion.setOnClickListener {
-                    NavHostFragment.findNavController(binding.botonNavegacion.findFragment()).navigateUp()
+                if (!isLocal){
+                    viewModel.digimonData.collect(){
+                        digimon ->
+                        binding.digimonName.text = digimon.name
+                        binding.digimonImage.load(digimon.images)
+                        binding.digimonLevels.text =getString(R.string.f_digimon_detail_level) + digimon.levels
+                        binding.digimonAttributes.text =getString(R.string.f_digimon_detail_attribute) + digimon.attributes
+                        binding.digimonTypes.text =getString(R.string.f_digimon_detail_type) + digimon.types
+                        binding.botonNavegacion.setOnClickListener {
+                            NavHostFragment.findNavController(binding.botonNavegacion.findFragment()).navigateUp()
+                        }
+                    }
+                }else{
+                    viewModel.localDigimonData.collect{
+                        digimon ->
+                        binding.digimonName.text=digimon.name
+                        binding.digimonLevels.text =getString(R.string.f_digimon_detail_level) + digimon.levels
+                        binding.digimonAttributes.text =getString(R.string.f_digimon_detail_attribute) + digimon.attributes
+                        binding.digimonTypes.text =getString(R.string.f_digimon_detail_type) + digimon.types
+                        binding.botonNavegacion.setOnClickListener {
+                            NavHostFragment.findNavController(binding.botonNavegacion.findFragment()).navigateUp()
+                        }
+                    }
                 }
-            }
         }
     }
 }

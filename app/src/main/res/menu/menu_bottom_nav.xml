@@ -4,12 +4,12 @@
 
     <item
         android:id="@+id/digimon"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/digimon_section"
         android:title="@string/digimon"
         />
     <item
         android:id="@+id/local"
-        android:title="@string/Box"
-        android:icon="@drawable/ic_launcher_background"
+        android:title="@string/Local"
+        android:icon="@drawable/mis_creaciones"
         />
 </menu>

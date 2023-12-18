@@ -23,6 +23,10 @@
         <argument
             android:name="name"
             app:argType="string" />
+        <argument
+            android:name="Local"
+            app:argType="boolean"
+            android:defaultValue="false" />
     </fragment>
 
 </navigation>

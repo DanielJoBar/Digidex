@@ -3,12 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.detail.DigimonDetailFragment">
+    tools:context=".ui.detail.DigimonDetailFragment"
+    >
     <ImageView
         android:id="@+id/botonNavegacion"
         android:layout_height="40dp"
         android:layout_width="80dp"
         android:src="@drawable/back"
+        >
+    </ImageView>
+    <ImageView
+        android:id="@+id/digimon_image"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="top"
+        android:src="@drawable/defaultimage"
         >
     </ImageView>
     <LinearLayout
@@ -19,44 +28,50 @@
         android:orientation="vertical"
         android:padding="20dp"
         >
-        <ImageView
-            android:id="@+id/digimon_image"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_gravity="center"
-            android:src="@drawable/ic_launcher_background"
-            >
-        </ImageView>
+
         <TextView
-            android:id="@+id/digimon_Text"
+            android:id="@+id/digimon_Name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="texto"
+            android:text=""
+            android:padding="20dp"
             android:layout_gravity="center"
+            android:textSize="40dp"
             >
         </TextView>
         <TextView
             android:id="@+id/digimon_Levels"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="texto"
-            android:layout_gravity="center"
+            android:text=""
+            android:layout_gravity="start"
+            android:padding="8dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:textSize="25dp"
             >
         </TextView>
         <TextView
             android:id="@+id/digimon_Types"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="texto"
-            android:layout_gravity="center"
-            >
+            android:text=""
+            android:layout_gravity="start"
+            android:padding="8dp"
+            android:paddingBottom="5dp"
+            android:paddingTop="10dp"
+            android:textSize="25dp"
+        >
         </TextView>
         <TextView
             android:id="@+id/digimon_Attributes"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="texto"
-            android:layout_gravity="center"
+            android:text=""
+            android:layout_gravity="start"
+            android:padding="8dp"
+            android:paddingBottom="5dp"
+            android:textSize="25dp"
             >
         </TextView>
 

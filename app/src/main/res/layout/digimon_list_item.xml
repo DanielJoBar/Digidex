@@ -20,15 +20,16 @@
             android:layout_width="150dp"
             android:layout_height="150dp"
             android:layout_gravity="center"
-            android:src="@drawable/ic_launcher_background"
+            android:src="@drawable/defaultimage"
             >
         </ImageView>
         <TextView
-            android:id="@+id/digimon_Text"
+            android:id="@+id/digimon_Name"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:text="texto"
+            android:text=""
             android:layout_gravity="center"
+            android:textSize="20sp"
             >
         </TextView>
     </LinearLayout>
